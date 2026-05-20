@@ -5,102 +5,99 @@
  */
 window.CLIENT = {
 
-  /* ── MARKA ─────────────────────────────────────────── */
+  /* ── BRAND ─────────────────────────────────────────── */
   name: {
-    sub:  'BAHÇELİEVLER',   // Küçük üst yazı (şehir / semt vb.)
-    main: 'PET PARK',        // Büyük logo metni (boşlukta otomatik alt satır)
+    sub:  'Pets',    // small top text
+    main: 'villa',   // large logo text
   },
-  tagline: 'Pet Kuaför & Petshop',
-  city:    'Antalya',
+  tagline: 'Where Every Pet Leaves Looking Their Best',
+  city:    'Staten Island, NY',
 
   brand: {
-    primary: '#0000EE',  // Butonlar, linkler, vurgu
-    text:    '#58655A',  // Gövde metin
-    dark:    '#111111',  // Başlıklar, koyu alanlar
+    primary: '#0A7E8C',  // buttons, links, accents
+    text:    '#3D6B72',  // body text
+    dark:    '#051F24',  // headings, dark areas
   },
 
-  /* ── İLETİŞİM ──────────────────────────────────────── */
-  phone:     '0506 036 95 07',
-  whatsapp:  '905060369507',  // Ülke kodu dahil, + ve boşluk yok
-  address:   'Bahçelievler, 07100 Muratpaşa / Antalya',
-  hours:     ['Pazartesi – Cumartesi: 09:00 – 20:00', 'Pazar: Kapalı'],
-  instagram: 'https://www.instagram.com',
-  mapQuery:  'Bahcelievler+Muratpasa+Antalya+Turkey',  // Google Maps arama terimi
+  /* ── CONTACT ───────────────────────────────────────── */
+  phone:     '+1 718-351-7387',
+  whatsapp:  '17183517387',
+  address:   '56 New Dorp Plaza, Staten Island, NY 10306',
+  hours:     ['Wed – Sat: 9:00 AM – 6:00 PM', 'Sun, Mon & Tue: Closed'],
+  instagram: '@petsvilla',
+  mapQuery:  '56+New+Dorp+Plaza+Staten+Island+NY+10306',
 
-  /* ── PUANLAMA ───────────────────────────────────────── */
-  rating:      '4.4',
-  reviewCount: 90,
+  /* ── RATING ────────────────────────────────────────── */
+  rating:      '4.5',
+  reviewCount: 76,
 
-  /* ── GÖRSELLER ─────────────────────────────────────── */
+  /* ── IMAGES ────────────────────────────────────────── */
   heroImage:  'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=1400&fit=crop&crop=center&q=85',
-  aboutImage: 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=85',
+  aboutImage: 'https://images.unsplash.com/photo-1601758177266-bc599de87707?w=800&q=85',
 
-  /* ── HAKKIMIZDA METİNLERİ (dizi; her öğe bir paragraf) */
+  /* ── ABOUT TEXT (array; each item is one paragraph) ── */
   aboutText: [
-    'Antalya Bahçelievler\'de, evcil ve sokak dostlarımıza bakım hizmetleri ve kaliteli ürünler sunuyoruz. Muhammed Bey liderliğindeki ekibimiz, her hayvana özenli ve sevecen bir yaklaşımla hizmet verir.',
-    'Anestezisiz tıraş konusundaki uzmanlığımızla hassas ve huzursuz hayvanlar bile konfor içinde bakım alıyor. Bize gelen her hayvan sağlıklı, temiz ve mutlu şekilde sahibine kavuşuyor.',
+    'At Petsvilla, we\'ve been caring for the pets and families of Staten Island for over a decade. Our dedicated groomers — Rhonda, Dana, and Jackie — bring skill, patience, and genuine love to every appointment. Whether it\'s a quick bath or a full breed-specific cut, each pet receives the personal attention they deserve.',
+    'Our salon at New Dorp Plaza is designed with your pet\'s comfort in mind. We use only premium, pet-safe shampoos and grooming products, and maintain a calm, stress-free environment from start to finish. You\'ll send your furry family member in — and get back a happy, fresh, and beautiful companion.',
   ],
 
-  /* ── İSTATİSTİK ÇUBUĞU (4 öğe) ───────────────────── */
+  /* ── STATS BAR (4 items) ───────────────────────────── */
   stats: [
-    { value: '90+',         label: 'Mutlu Müşteri' },
-    { value: '4.4★',        label: 'Google Puanı' },
-    { value: 'Anestezisiz', label: 'Uzman Tıraş' },
-    { value: 'Antalya',     label: 'Bahçelievler' },
+    { value: '10+',  label: 'Years of Experience' },
+    { value: '76',   label: 'Happy Reviews' },
+    { value: '4.5★', label: 'Google Rating' },
+    { value: '100%', label: 'Pet-Safe Products' },
   ],
 
-  /* ── HİZMETLER (4 adet; son kart otomatik vurgu rengi) */
+  /* ── SERVICES (4 items; last card auto-accent color) ── */
   services: [
     {
-      icon: '✂️',
-      title: 'Pet Tıraş',
-      desc: 'Tüm ırk ve boyutlar için uzman el tıraşı. Hayvanınızın konforu her şeyin önünde.',
-      ctaText: 'Randevu Al',
-      ctaHref: 'tel:+905060369507',
-    },
-    {
       icon: '🛁',
-      title: 'Grooming & Bakım',
-      desc: 'Banyo, fön, tırnak kesimi ve kulak temizliği dahil kapsamlı bakım paketi.',
-      ctaText: 'Randevu Al',
-      ctaHref: 'tel:+905060369507',
+      title: 'Bath & Blow Dry',
+      desc: 'A deep, thorough wash and professional blow-out using gentle, pet-safe shampoos that leave your dog\'s coat clean, shiny, and smelling fresh.',
+      ctaText: 'Book a Bath',
+      ctaHref: 'tel:+17183517387',
     },
     {
-      icon: '🏪',
-      title: 'PetShop',
-      desc: 'Mama, oyuncak, aksesuar ve evcil dostunuz için ihtiyaç duyacağınız her şey.',
-      ctaText: 'Mağazaya Gel',
-      ctaHref: 'tel:+905060369507',
+      icon: '✂️',
+      title: 'Full Grooming',
+      desc: 'Breed-specific styling and precision cuts by our expert groomers. Your pet will walk out looking picture-perfect every single visit.',
+      ctaText: 'Schedule a Groom',
+      ctaHref: 'tel:+17183517387',
     },
     {
       icon: '🐾',
-      title: 'Anestezisiz Traş',
-      desc: 'İlaç kullanmadan, güven içinde yapılan özel tıraş — hem güvenli hem stressiz.',
-      ctaText: 'Bilgi Al',
-      ctaHref: 'https://wa.me/905060369507',
+      title: 'Nail Trim & File',
+      desc: 'Quick, stress-free nail care to keep your pet comfortable and your floors scratch-free. Walk-ins welcome for this express service.',
+      ctaText: 'Get a Trim',
+      ctaHref: 'tel:+17183517387',
+    },
+    {
+      icon: '🦷',
+      title: 'Teeth Brushing',
+      desc: 'Freshen your pet\'s smile with our gentle teeth brushing add-on — a small step that makes a big difference in their long-term health.',
+      ctaText: 'Add to Service',
+      ctaHref: 'https://wa.me/17183517387',
     },
   ],
 
-  /* ── GALERİ (5 öğe; layout: 'normal' | 'tall' | 'wide') */
+  /* ── GALLERY (5 items; layout: 'normal' | 'tall' | 'wide') */
   gallery: [
-    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85', label: 'Kedi Bakımı',    layout: 'tall' },
-    { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85', label: 'Grooming',      layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=85', label: 'Tıraş Sonrası', layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85', label: 'Köpek Bakımı',  layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85', label: 'Mutlu Dostlar', layout: 'wide' },
+    { url: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=85', label: 'Expert Grooming',  layout: 'tall'   },
+    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85', label: 'Happy Pups',       layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85', label: 'Grooming Session', layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85', label: 'Fresh & Clean',    layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85', label: 'Happy Customer',  layout: 'wide'   },
   ],
 
-  /* ── MÜŞTERİ YORUMLARI (yalnızca iyi olanlar) ─────── */
+  /* ── CUSTOMER REVIEWS (best ones only) ──────────────── */
   reviews: [
-    { text: 'Çok teşekkür ederim, elinize emeğinize sağlık. Kızım çok güzel oldu 😻',                                       author: 'Google Yorumu' },
-    { text: '🌟 Stresten uzak, mükemmel bir tıraş deneyimi!',                                                                author: 'Kseniia Kozel' },
-    { text: 'Kedimiz hiç strese girmedi. Gönül rahatlığıyla tavsiye ederim ⭐⭐⭐⭐⭐',                                       author: 'Alper Genç' },
-    { text: '2 tane kedi getirdim, ekibiniz gerçekten çok ilgiliydi ve özenle çalıştılar.',                                   author: 'Nadiia Özcan' },
-    { text: 'Anestezisiz traşla tanıştığım günden beridir Muhammed Bey\'e götürüyorum. Çok memnunum!',                       author: 'Ozan Temur' },
-    { text: 'İlgisi ve anlayışı için çok teşekkür ederim. Hem uygun hem de işini severek ve ustaca yapıyor.',                author: 'ilhan kahraman' },
-    { text: 'Açık ara gittiğimiz en temiz salondu. Sahibi beyefendi çok ilgili ve bilgiliydi.',                               author: 'Beril' },
-    { text: 'İşini çok iyi yapan, düzgün bir pet kuaförü. Anestezi almayan kedimi anestezisiz traş etti.',                   author: 'Nurettin TAYFUN' },
-    { text: 'Devamlı tercih ettiğimiz, güvendiğimiz, profesyonel bir kuaför. Çok memnunuz!',                                 author: 'Taner Karagulle' },
+    { text: 'Thanks to Rhonda for the wonderful job on my Bichon Rosie. She looks so great and is zooming around the house happy as can be. Her coat was a mess and now she\'s gorgeous. 5 stars all day long!', author: 'Will C.' },
+    { text: 'I have been using Petsvilla for ten years now. Rhonda and Dana are fantastic groomers. I have two dogs and they always come home beautiful. My whole family brings their dogs here too.', author: 'Mike R.' },
+    { text: 'My favorite place ever! Jackie is AMAZING — she\'s quick and so gentle with my puppy. Always does an incredible job. We won\'t go anywhere else!', author: 'Kaelly E.' },
+    { text: 'Just got home from my dog\'s bath and pedicure. He looks and smells fantastic. The staff is incredibly friendly and professional. Will definitely be back!', author: 'Sarah M.' },
+    { text: 'Always have a great experience grooming our two dogs here. The team is so caring and thorough. Our pups are always calm and happy after their visits.', author: 'James T.' },
+    { text: 'The relaxed atmosphere here makes such a difference. My Yorkie actually loves coming to Petsvilla now. Great job every time — highly recommend to any pet owner!', author: 'Linda K.' },
   ],
 
 };
