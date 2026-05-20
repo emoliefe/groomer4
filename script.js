@@ -1,38 +1,38 @@
-/* ── SAYFA DOLDURMA ─────────────────────────────────── */
+/* ── PAGE POPULATION ─────────────────────────────────── */
 function populatePage(c) {
 
-  /* 1. Marka renkleri (CSS değişkenleri) */
+  /* 1. Brand colors (CSS variables) */
   const r = document.documentElement.style;
   r.setProperty('--primary', c.brand.primary);
   r.setProperty('--text',    c.brand.text);
   r.setProperty('--dark',    c.brand.dark);
 
-  /* 2. Sayfa başlığı ve meta */
+  /* 2. Page title and meta */
   document.title = `${c.name.sub} ${c.name.main} | ${c.tagline} ${c.city}`;
   const metaDesc = document.getElementById('meta-desc');
   if (metaDesc) metaDesc.content =
-    `${c.name.sub} ${c.name.main} — ${c.city}'nın güvenilir pet kuaförü ve petshop. ${c.tagline}.`;
+    `${c.name.sub} ${c.name.main} — Trusted pet groomer in ${c.city}. ${c.tagline}.`;
 
-  /* 3. data-field: metin içerikleri */
+  /* 3. data-field: text content */
   const resolve = (obj, path) => path.split('.').reduce((o, k) => o?.[k], obj);
   document.querySelectorAll('[data-field]').forEach(el => {
     const val = resolve(c, el.dataset.field);
     if (val !== undefined) el.textContent = val;
   });
 
-  /* 4. WhatsApp linkleri */
+  /* 4. WhatsApp links */
   document.querySelectorAll('[data-wa]').forEach(el => {
     el.href = `https://wa.me/${c.whatsapp}`;
     el.target = '_blank';
     el.rel = 'noopener';
   });
 
-  /* 5. Telefon linkleri */
+  /* 5. Phone links */
   document.querySelectorAll('[data-tel]').forEach(el => {
     el.href = `tel:+${c.whatsapp}`;
   });
 
-  /* 6. Hero bölümü */
+  /* 6. Hero section */
   const set = (id, val, html) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -40,15 +40,15 @@ function populatePage(c) {
   };
 
   set('hero-badge',        `⭐ ${c.rating}`);
-  set('hero-eyebrow',      `${c.reviewCount} Google Yorumu · ${c.city}`);
+  set('hero-eyebrow',      `${c.reviewCount} Google Reviews · ${c.city}`);
   set('hero-title-main',   c.name.main.split(' ').join('<br>'), true);
   set('hero-badge-rating', c.rating);
-  set('hero-badge-count',  `${c.reviewCount} yorum`);
+  set('hero-badge-count',  `${c.reviewCount} reviews`);
 
   const heroImg = document.getElementById('hero-img');
   if (heroImg) { heroImg.src = c.heroImage; heroImg.alt = `${c.name.sub} ${c.name.main}`; }
 
-  /* Hero hizmet satırı */
+  /* Hero services row */
   set('hero-services',
     c.services.map((s, i) =>
       `${i > 0 ? '<span class="dot">·</span>' : ''}<span>${s.icon} ${s.title.split(' ')[0]}</span>`
@@ -60,7 +60,7 @@ function populatePage(c) {
       `${i > 0 ? '<div class="stat-divider"></div>' : ''}<div class="stat-item"><strong>${s.value}</strong><span>${s.label}</span></div>`
     ).join(''), true);
 
-  /* 8. Hizmet kartları */
+  /* 8. Service cards */
   set('services-grid',
     c.services.map((s, i) => `
       <div class="service-card${i === c.services.length - 1 ? ' service-card--accent' : ''}">
@@ -74,7 +74,7 @@ function populatePage(c) {
       </div>`
     ).join(''), true);
 
-  /* 9. Hakkımızda */
+  /* 9. About section */
   const aboutImg = document.getElementById('about-img');
   if (aboutImg) { aboutImg.src = c.aboutImage; aboutImg.alt = `${c.name.sub} ${c.name.main} — ${c.city}`; }
   set('about-img-tag',    `${c.name.main} · ${c.city}`);
@@ -82,7 +82,7 @@ function populatePage(c) {
   set('about-stat-reviews', `${c.reviewCount}+`);
   set('about-stat-rating',  `${c.rating}★`);
 
-  /* 10. Galeri */
+  /* 10. Gallery */
   set('gallery-grid',
     c.gallery.map(g => `
       <div class="gallery__item${g.layout === 'tall' ? ' gallery__item--tall' : g.layout === 'wide' ? ' gallery__item--wide' : ''}">
@@ -91,7 +91,7 @@ function populatePage(c) {
       </div>`
     ).join(''), true);
 
-  /* 11. Yorumlar (× 2 — seamless loop için) */
+  /* 11. Reviews (× 2 — for seamless loop) */
   const card = rv => `
     <div class="review-card">
       <div class="review-card__stars">★★★★★</div>
@@ -100,7 +100,7 @@ function populatePage(c) {
     </div>`;
   set('reviews-track', [...c.reviews, ...c.reviews].map(card).join(''), true);
 
-  /* 12. İletişim */
+  /* 12. Contact */
   set('contact-address', c.address);
   const phoneEl = document.getElementById('contact-phone');
   if (phoneEl) { phoneEl.textContent = c.phone; phoneEl.href = `tel:+${c.whatsapp}`; }
@@ -113,13 +113,13 @@ function populatePage(c) {
   if (igEl) igEl.href = c.instagram;
 }
 
-/* ── NAV: şeffaf → dolgulu ──────────────────────────── */
+/* ── NAV: transparent → filled ──────────────────────── */
 const nav = document.getElementById('nav');
 const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 30);
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
 
-/* ── HAMBURGER MENÜ ─────────────────────────────────── */
+/* ── HAMBURGER MENU ──────────────────────────────────── */
 const burger   = document.getElementById('navBurger');
 const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click', () => {
@@ -128,14 +128,14 @@ burger.addEventListener('click', () => {
 });
 navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 
-/* ── SCROLL FADE-IN ─────────────────────────────────── */
+/* ── SCROLL FADE-IN ──────────────────────────────────── */
 const observer = new IntersectionObserver(
   entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
   { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
 );
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-/* ── BAŞLAT ─────────────────────────────────────────── */
+/* ── INIT ────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   if (window.CLIENT) populatePage(window.CLIENT);
 });
