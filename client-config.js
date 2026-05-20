@@ -1,7 +1,7 @@
 /**
- * MÜŞTERİ KONFİGÜRASYONU
- * Yeni müşteri için yalnızca bu dosyayı doldurun.
- * index.html, style.css ve script.js hiç değişmez.
+ * CLIENT CONFIGURATION
+ * Fill in only this file for each new client.
+ * index.html, style.css and script.js are never modified.
  */
 window.CLIENT = {
 
@@ -14,9 +14,9 @@ window.CLIENT = {
   city:    'Staten Island, NY',
 
   brand: {
-    primary: '#0A7E8C',  // buttons, links, accents
-    text:    '#3D6B72',  // body text
-    dark:    '#051F24',  // headings, dark areas
+    primary: '#C9184A',  // buttons, links, accents
+    text:    '#6B4C5A',  // body text
+    dark:    '#1A0010',  // headings, dark areas
   },
 
   /* ── CONTACT ───────────────────────────────────────── */
@@ -32,8 +32,8 @@ window.CLIENT = {
   reviewCount: 76,
 
   /* ── IMAGES ────────────────────────────────────────── */
-  heroImage:  'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=1400&fit=crop&crop=center&q=85',
-  aboutImage: 'https://images.unsplash.com/photo-1601758177266-bc599de87707?w=800&q=85',
+  heroImage:  'https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1400&h=1600&q=90',
+  aboutImage: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=90',
 
   /* ── ABOUT TEXT (array; each item is one paragraph) ── */
   aboutText: [
@@ -83,11 +83,11 @@ window.CLIENT = {
 
   /* ── GALLERY (5 items; layout: 'normal' | 'tall' | 'wide') */
   gallery: [
-    { url: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=85', label: 'Expert Grooming',  layout: 'tall'   },
-    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=600&q=85', label: 'Happy Pups',       layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85', label: 'Grooming Session', layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=85', label: 'Fresh & Clean',    layout: 'normal' },
-    { url: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=900&q=85', label: 'Happy Customer',  layout: 'wide'   },
+    { url: 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=700&q=90', label: 'Fluffy & Fresh',     layout: 'tall'   },
+    { url: 'https://images.unsplash.com/photo-1601758177266-bc599de87707?auto=format&fit=crop&w=700&q=90', label: 'Bath Time',         layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=90', label: 'Cat Grooming',      layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=90', label: 'Beautiful Coat',     layout: 'normal' },
+    { url: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1100&q=90', label: 'Happy Companions',   layout: 'wide'   },
   ],
 
   /* ── CUSTOMER REVIEWS (best ones only) ──────────────── */
